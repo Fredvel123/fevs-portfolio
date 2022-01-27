@@ -1,5 +1,4 @@
-import React from 'react';
-import { Fragment } from 'react/cjs/react.production.min';
+import React, { Fragment } from 'react';
 // components
 import Header from './Header';
 import HomePage from './HomePage';
@@ -7,7 +6,7 @@ import HomePage from './HomePage';
 function Home() {
   return (
     <Fragment>
-      <div id='home'>
+      <div id='home' >
         <Header />
         <HomePage />
       </div>

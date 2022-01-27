@@ -8,7 +8,8 @@ export const HeaderStyle = styled.header`
   padding: 0 5%;
   /* height: ; */ // this wiil be in 
   height: ${({scroll}) => !scroll ? '20vh' : '12vh'};
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 70%;
   position: fixed;
   transition: ease-in .5s;
   top: 0;
@@ -39,7 +40,7 @@ export const HeaderStyle = styled.header`
   // navegation
   nav {
     display: flex;
-    background-color: red;
+    justify-content: flex-end;
     /* width: 25%; */
     /* margin-left: 10%; */
     a {
@@ -47,14 +48,33 @@ export const HeaderStyle = styled.header`
       font-size: 17px;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 200 !important;
-      /* margin-right: 10%; */
+      margin-right: 5%;
       letter-spacing: 2px;
       transition: .2s;
       &:hover {
         color: ${colors.white};
       }
     }
+    a.effect::before {
+        content: "•";
+         --tw-text-opacity: 1;
+        color: rgba(253,67,112,var(--tw-text-opacity));
+        transition-duration: .2s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+        font-size: 2.25rem;
+        line-height: 24px;
+        position: relative;
+        top: auto;
+        bottom: auto;
+        right: 5px;
+        vertical-align: middle;
+      }
   }
+    div {
+      display: none;
+    }
   @media screen and (max-width: 1015px) {
     padding: 0 10%;
     nav {
@@ -63,11 +83,37 @@ export const HeaderStyle = styled.header`
   }
   // code to header becomes to a resposive navbar.
   @media screen and (max-width: 770px) {
+    display: flex;
     background-color: #0d1b36d2;
     backdrop-filter: blur(6px); 
     height: 12vh;
     top: 88vh;
     bottom: 0%;
     right: 0%;
+    padding: 0 4%;
+    a {display: none;}
+    nav {
+      display: none;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      /* background-color: red; */
+      align-items: center;
+      a {
+        padding-top: 15px;
+        text-align: center;
+        color: ${colors.gray} !important ;
+        display: block;
+        width: 50px;
+        height: 10vh;
+        /* padding-top: 3vh; */
+        &:hover{
+          border-top: 2px solid red;
+          color: ${colors.pink};
+        }
+      }
+    }
   }
 ` 

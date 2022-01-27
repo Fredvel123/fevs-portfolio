@@ -45,6 +45,7 @@ export const Letters = styled.div`
     font-size: 17.5px;
   }
   a {
+    
     font-family: ${fonts.letter2};
     margin-top: 4vh;
     background-color: ${colors.pink};
@@ -60,5 +61,14 @@ export const Letters = styled.div`
       font-size: 40px;
       line-height: 1.7em;
     } 
+  }
+  @media screen and (max-width: 770px) {
+    h3 {
+      font-size: 33px;
+      line-height: 1.7em;
+    } 
+    h4 {
+      font-size: 14px;
+    }
   }
 `
