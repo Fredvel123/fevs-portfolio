@@ -3,8 +3,10 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  scroll-behavior: smooth;
 }
 body {
   background: #141628;
-  color: #ebebeb;
+  /* color: #f84f79; */
+  color: #ffffff;
 }
