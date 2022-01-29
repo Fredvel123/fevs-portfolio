@@ -1,9 +1,14 @@
 import React from 'react';
+// components
+import Title from './Title';
+import Projects from './Projects';
 
 function Work() {
+  
   return (
     <div id='work'>
-      <h1>work sectiom</h1>
+      <Title />
+      <Projects />
     </div>
   );
 }

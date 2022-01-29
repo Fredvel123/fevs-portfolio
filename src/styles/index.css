@@ -9,4 +9,9 @@ body {
   background: #141628;
   /* color: #f84f79; */
   color: #ffffff;
+  /* background:; */
+}
+/* code to add a margin when you're scrolling*/
+[id] {
+  scroll-margin-top: 12vh;
 }
