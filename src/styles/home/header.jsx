@@ -102,18 +102,16 @@ export const HeaderStyle = styled.header`
       /* background-color: red; */
       align-items: center;
       a {
-        padding-top: 15px;
         text-align: center;
         color: ${colors.gray} !important ;
         display: block;
-        width: 50px;
-        height: 10vh;
         /* padding-top: 3vh; */
-        &:hover{
-          border-top: 2px solid red;
-          color: ${colors.pink};
-        }
       }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    div a {
+      font-size: 10px;
     }
   }
 ` 

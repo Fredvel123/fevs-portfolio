@@ -7,6 +7,8 @@ export const Page = styled.div`
   margin: 0 5% ;
   padding-top: 25vh;
   display: flex;
+  margin-bottom: 10vh !important ;
+
   img {
     height: 500px;
     margin-left: 5%;
@@ -34,10 +36,24 @@ export const Letters = styled.div`
     font-family: ${fonts.letter1} ;
     font-size: 55px;
     line-height: 2em;
+    
+    /* display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 57ch;
+    animation: typing 2s steps(57),
+    blink .5s infinite step-end alternate ;
+    overflow: hidden; */
     span {
       color: ${colors.darkPink};
     }
   }
+  /* @keyframes typing {
+      from { width: 0; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    } */
   h4 {
     font-family: ${fonts.letter2};
     margin: 3vh 0;
@@ -45,9 +61,8 @@ export const Letters = styled.div`
     font-size: 17.5px;
   }
   a {
-    
     font-family: ${fonts.letter2};
-    margin-top: 4vh;
+    margin: 4vh 0;
     background-color: ${colors.pink};
     padding: 3vh 6%;
     color: #e2e2e2;

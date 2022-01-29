@@ -8,8 +8,8 @@ function HomePage() {
     <Page>
       <Letters id='home'>
         <h3>
-          Hey, Im <span>Freddy</span>  <br />
-          a <span>self-taught</span> programmer <br />
+          Hey, Im <span>Freddy</span>  <br /> 
+          a <span>self-taught</span> programmer <br /> 
           & front-end developer. <br />
         </h3>
         <h4>Stick around to see some of my work.</h4>
