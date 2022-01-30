@@ -27,14 +27,14 @@ function Header() {
       <nav >
         <a href="#work">   Work </a>
         <a href="#about"> About </a>
-        <a href="#skills"> Skills </a>
+        {/* <a href="#skills"> Skills </a> */}
         <a href="#contact"> Contact </a>
       </nav>
       <div>
         <a href="#home"><HomeOutlined style={style}/></a>
         <a href="#work"><CodeOutlined style={style}/></a>
         <a href="#about"><UserOutlined style={style}/></a>
-        <a href="#skills"><ForkOutlined style={style}/></a>
+        {/* <a href="#skills"><ForkOutlined style={style}/></a> */}
         <a href="#contact"><MailOutlined style={style}/></a>       
       </div>
     </HeaderStyle>

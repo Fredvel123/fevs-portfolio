@@ -7,8 +7,8 @@ import fonts from '../tools/fonts.json';
 export const ProjectsStyles = styled.div` 
   padding:0 5% ;
   padding-top: 20vh;
+  padding-bottom: 30vh;
   background: ${colors.secondBlue};
-  padding-bottom: 50vh;
   display: flex;
   align-items: center;
   img {
@@ -83,6 +83,7 @@ export const Text = styled.div`
     }
   }
   h4 {
+    font-weight: 50;
     font-family: ${fonts.letter2};
     margin-right: 12%;
     font-size: 18px;

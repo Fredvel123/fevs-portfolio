@@ -127,6 +127,7 @@ function Projects() {
   const callback = (observer) => {
     if(observer[0].isIntersecting) {
       setTimeout(() => {
+        // observer[0].target.classList.remove('invisible');
         observer[0].target.classList.add('visible');
       }, 700);
     }else {
