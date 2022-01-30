@@ -5,6 +5,7 @@ import fonts from '../tools/fonts.json';
 
 
 export const HeaderStyle = styled.header`
+  z-index: 200;
   padding: 0 5%;
   /* height: ; */ // this wiil be in 
   height: ${({scroll}) => !scroll ? '20vh' : '12vh'};

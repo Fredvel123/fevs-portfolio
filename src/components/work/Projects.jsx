@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 // styled componets
-import { ProjectsStyles } from '../../styles/work/projects';
+import { ProjectsStyles, Text } from '../../styles/work/projects';
 // images
 import notesApp from '../../images/notes-app.jpg'
 import gameApp from '../../images/game-app.jpg'
@@ -9,12 +9,13 @@ import photosApp from '../../images/photos-app.jpg'
 import movieApp from '../../images/movie-app.jpg'
 import dogApp from '../../images/dog-app.jpg'
 // icons
-import {ArrowRightOutlined, ArrowLeftOutlined} from '@ant-design/icons';
+import {RightOutlined, ArrowRightOutlined, ArrowLeftOutlined} from '@ant-design/icons';
 
 function Projects() {
   const projects = [ 
     {
       id: '1',
+      info: "App Web",
       title: "Notes App ",
       img: notesApp,
       text: "I made this little app to add new tasks and you also can get a Random Quote from Quotes APi ",
@@ -24,6 +25,7 @@ function Projects() {
     },
     {
       id: '2',
+      info: "web Site",
       title: "Games App ",
       img: gameApp,
       text: "Games Info App, you can search any game and get the info from the RAWG API",
@@ -33,6 +35,7 @@ function Projects() {
     },
     {
       id: '3',
+      info: "App Web",
       title: "e Commerce App",
       img: eCommApp,
       text: 'I made a small application that allows you to "buy things". I used an API that provides you with a Fake Online Store.',
@@ -43,6 +46,7 @@ function Projects() {
     },
     {
       id: '4',
+      info: "App Web",
       title: "Unsplusssh ",
       img: photosApp,
       text: "This is an app SPA (Single Page Aplication) to search photograph from the Unsplash API.",
@@ -52,6 +56,7 @@ function Projects() {
     },
     {
       id: '5',
+      info: "Web Site",
       title: "Movie App",
       img: movieApp,
       text: "This Movie App is made to search information about any movie, you can search your favorite movie and get information about: Actors, director, etc",
@@ -61,6 +66,7 @@ function Projects() {
     },
     {
       id: '6',
+      info: "Web Site",
       title: "Search Dog App",
       img: dogApp,
       text: "This is a very simple app, but this is consuming another Api, and I love to consume APIs",
@@ -91,18 +97,33 @@ function Projects() {
     }
     setProject(projects[count.current])
   }
+  const color = {
+    color: 'white',
+    fontSize: '20px'
+  }
   return (
     <ProjectsStyles>
-      <h2>projects</h2>
-      {project ?
-        <div>
-          <h2>{project.title}</h2>
-      <img src={project.img} width={500} alt="" />
+      <Text>
+        <div className='buttons'>
+          <button id='after'onClick={afterPage} ><ArrowLeftOutlined style={color} /></button>
+          <h2> {`0${project.id}/06`} </h2>
+          <button id='next' onClick={nextPage} ><ArrowRightOutlined style={color} /></button>
         </div>
-      : null }
-      <button id='next' onClick={nextPage} ><ArrowRightOutlined /></button>
-      <button id='after'onClick={afterPage} ><ArrowLeftOutlined /></button>
+        <h3>{project.title}</h3>
+        <p>{project.info}</p>
+        <h4>{project.text}</h4>
 
+          <a className='github' href={project.github} target='__blank' >
+            view code
+            <RightOutlined />
+          </a>
+          <a href={project.url} target='__blank' >
+            view demo 
+            <RightOutlined />
+          </a>
+      </Text>
+      <img src={project.img} alt="" />
+        
     </ProjectsStyles>
   );
 }

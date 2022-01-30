@@ -14,6 +14,7 @@ export const TitleStyles = styled.div`
     margin-left: calc(7% + 0px) ; // calc() is to calculate the margin :)
     /* margin-right: 3%; */
     &::before{
+      z-index: 100;
       content: '';
       background: ${colors.darkPink};
       position: absolute;
