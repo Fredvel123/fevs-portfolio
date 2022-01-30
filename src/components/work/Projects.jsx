@@ -9,13 +9,14 @@ import photosApp from '../../images/photos-app.jpg'
 import movieApp from '../../images/movie-app.jpg'
 import dogApp from '../../images/dog-app.jpg'
 // icons
-import {RightOutlined, ArrowRightOutlined, ArrowLeftOutlined} from '@ant-design/icons';
+import {RightOutlined, ArrowRightOutlined, ArrowLeftOutlined, InstagramFilled} from '@ant-design/icons';
 
 function Projects() {
   const projects = [ 
     {
       id: '1',
       info: "App Web",
+      img_id: "notesApp",
       title: "Notes App ",
       img: notesApp,
       text: "I made this little app to add new tasks and you also can get a Random Quote from Quotes APi ",
@@ -25,6 +26,7 @@ function Projects() {
     },
     {
       id: '2',
+      img_id: "gamesApp",
       info: "web Site",
       title: "Games App ",
       img: gameApp,
@@ -35,6 +37,7 @@ function Projects() {
     },
     {
       id: '3',
+      img_id: "eCommerceApp",
       info: "App Web",
       title: "e Commerce App",
       img: eCommApp,
@@ -46,7 +49,8 @@ function Projects() {
     },
     {
       id: '4',
-      info: "App Web",
+      img_id: "App Web",
+      info: "unsplush",
       title: "Unsplusssh ",
       img: photosApp,
       text: "This is an app SPA (Single Page Aplication) to search photograph from the Unsplash API.",
@@ -56,6 +60,7 @@ function Projects() {
     },
     {
       id: '5',
+      img_id: "movieApp",
       info: "Web Site",
       title: "Movie App",
       img: movieApp,
@@ -66,6 +71,7 @@ function Projects() {
     },
     {
       id: '6',
+      img_id: "dogApp",
       info: "Web Site",
       title: "Search Dog App",
       img: dogApp,
@@ -82,48 +88,90 @@ function Projects() {
     setProject(projects[count.current]);
   }, []);  
   const nextPage = () => {
-    if(count.current <= 4) {
+    const value = projects.length - 2;
+    if(count.current <= value ) {
       count.current += 1;
     }else {
       count.current = 0
     }
-    setProject(projects[count.current])
+    // this is a combination beetwen css and javascript
+    setTimeout(() => {
+      setProject(projects[count.current])
+    }, 700);
+    imageAnimation();
+    // code to remove the class visible
+    const img = document.getElementById(`${project.img_id}`);
+    img.classList.remove('visible')
   }
   const afterPage = () => {
     if(count.current >= 1 ) {
       count.current -= 1
     }else {
-      count.current = 5
+      count.current = projects.length - 1
     }
-    setProject(projects[count.current])
+    // this is a combination beetwen css and javascript
+    setTimeout(() => {
+      setProject(projects[count.current])
+    }, 700); // this setTimeout should be the same time (in this case 7 seconds). eiht the animation in css
+    imageAnimation();
+    // code to remove the class visible
+    const img = document.getElementById(`${project.img_id}`);
+    img.classList.remove('visible')
   }
   const color = {
     color: 'white',
     fontSize: '20px'
   }
+  // images animation
+  
+  const callback = (observer) => {
+    if(observer[0].isIntersecting) {
+      setTimeout(() => {
+        observer[0].target.classList.add('visible');
+      }, 700);
+    }else {
+      observer[0].target.classList.remove('visible');
+    }
+  }
+  const options = {
+      root: null,
+      rootMargin: '0px 0px 0px 0px',
+      threshold: 0.3
+    }
+  const element = useRef(null);
+  const imageAnimation = () => {
+    const observer = new IntersectionObserver(callback, options);
+    // if(project.length > 0) {
+    //   observer.observe(document.getElementById(`${project.img_id}`))
+    // }else {
+    // }
+    observer.observe(element.current)
+  }
+  useEffect(() => {
+    imageAnimation();
+  }, []);
+  
   return (
     <ProjectsStyles>
-      <Text>
+      <Text >
         <div className='buttons'>
-          <button id='after'onClick={afterPage} ><ArrowLeftOutlined style={color} /></button>
+          <button id='after' onClick={afterPage} ><ArrowLeftOutlined style={color} /></button>
           <h2> {`0${project.id}/06`} </h2>
           <button id='next' onClick={nextPage} ><ArrowRightOutlined style={color} /></button>
         </div>
         <h3>{project.title}</h3>
         <p>{project.info}</p>
         <h4>{project.text}</h4>
-
-          <a className='github' href={project.github} target='__blank' >
-            view code
-            <RightOutlined />
-          </a>
-          <a href={project.url} target='__blank' >
-            view demo 
-            <RightOutlined />
-          </a>
+        <a className='github' href={project.github} target='__blank' >
+          view code
+          <RightOutlined />
+        </a>
+        <a href={project.url} target='__blank' >
+          view demo
+          <RightOutlined />
+        </a>
       </Text>
-      <img src={project.img} alt="" />
-        
+      <img src={project.img} ref={element} id={project.img_id} alt="" />
     </ProjectsStyles>
   );
 }

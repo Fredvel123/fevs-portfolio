@@ -10,18 +10,28 @@ export const ProjectsStyles = styled.div`
   background: ${colors.secondBlue};
   padding-bottom: 50vh;
   display: flex;
+  align-items: center;
   img {
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 55%;
-    height: 450px;
-    &:hover{
-      height: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: ease-in-out .7s;
+    transform: translateX(-5%);
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
+  /* img.visible{
+    opacity: 1;
+  } */
   @media screen and (max-width: 750px) {
     flex-direction: column-reverse;
     img {
+      object-fit: scale-down;
       width: 100%;
+      height: 100%;
     }
   }
 `
@@ -29,6 +39,8 @@ export const ProjectsStyles = styled.div`
 export const Text = styled.div`
   display: flex;
   flex-direction: column;
+
+  
   .buttons {
     display: flex;
     margin-bottom: 5vh;
@@ -88,6 +100,7 @@ export const Text = styled.div`
     background: ${colors.darkPink};
     margin-top: 4vh;
     color: white;
+    margin-right: 2%;
     transition: ease-in-out .2s;
     &:hover{
       background: ${colors.secondBlue};
@@ -98,5 +111,13 @@ export const Text = styled.div`
   // responsivde design
   @media screen and (max-width: 750px) {
     padding-top: 15vh;
+    a {
+      width: 100%;
+      &:hover{
+        background: ${colors.secondBlue};
+        border: 2px solid white;
+        width: 100%;
+      }
+    }
   }
 `
