@@ -8,10 +8,19 @@ export const Div = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  img {
+  img { 
+    opacity: 0;
+    transition: ease 1s;
+    scale: 0.8;
+    transform: translateX(-10%);
     width: 350px;
     height: 350px;
     object-fit: cover;
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+      scale: 1;
+    }
   }
   @media screen and (max-width: 750px) {
     flex-direction: column-reverse;
@@ -24,10 +33,12 @@ export const Div = styled.div`
 `
 
 export const Info = styled.div`
-margin-right: 20%;
+  margin-right: 20%;
   .section {
     margin: 10vh 0;
     h2 {
+      opacity: 0;
+      transition: ease-in-out .7s;
       color: white;
       font-size: 18px;
       font-family: ${fonts.letter1};
@@ -45,6 +56,9 @@ margin-right: 20%;
       }
     }
     h3 {
+      opacity: 0;
+      transition: ease-in-out 1s;
+      transform: translateX(-5%);
       font-size: 16px;
       font-family: ${fonts.letter2};
       line-height: 5vh;
@@ -52,7 +66,11 @@ margin-right: 20%;
       margin-bottom: 2.4vh;
     }
   }
+  
   a {
+    opacity: 0;
+    transition: ease-in-out .7s;
+    transform: translateY(-10%);
     color: white;
     font-family: ${fonts.letter2};
     background: ${colors.darkPink};
@@ -60,6 +78,19 @@ margin-right: 20%;
     transition: ease-in .3s;
     &:hover{
       background: ${colors.secondBlue};
+    }
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  div.visible{
+    h2 {
+      opacity: 1;
+    }
+    h3 {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
   @media screen and (max-width: 750px) {
