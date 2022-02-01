@@ -40,8 +40,8 @@ function WhoAmI() {
           <h2>Who am I</h2>
           <h3>
             I'm Freddy Velarde, 20 years old and I'm from Bolivia.
-            I'm a programmer and front-end web developer, Everything I learned are as self-taught learner,
-            over many mounths and throght many projects made.
+            I'm a programmer and front-end web developer, Everything I learned was as self-taught learner,
+            over many months and through many projects made.
           </h3>
         </div>
         <div ref={paragraph2} className='section'>

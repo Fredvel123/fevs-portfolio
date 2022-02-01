@@ -41,8 +41,8 @@ function Title() {
       </h3>
       <h4 ref={letter3}>
         If you want to work with me, you can find me <br />
-        throght my social media networks <br />
-        or send me a email to:
+        through my social media networks <br />
+        or send me an email to:
       </h4 >
       <span ref={letter4} >freddyvelarde59@gmail.com</span>
     </TitleStyles>

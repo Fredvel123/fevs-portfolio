@@ -20,3 +20,9 @@ body {
     scroll-margin-top: 0vh;
   } 
 }
+/* 
+@media screen and (max-width: 770px) {
+  body {
+    padding: 0 -5%;
+  }
+} */

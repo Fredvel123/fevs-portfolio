@@ -19,7 +19,7 @@ export const Page = styled.div`
     }
   }
   @media screen and (max-width: 1015px) {
-    margin: 0 10%;
+    /* margin: 0 10%; */
     padding-top: 35vh;
     img {
       display: none;
@@ -28,6 +28,10 @@ export const Page = styled.div`
   @media screen and (max-width: 770px) {
     padding-top: 15vh;
   }
+  @media screen and (max-width: 770px) {
+    margin: 0 5%;
+  }
+ 
 `
 
 export const Letters = styled.div`
@@ -36,24 +40,10 @@ export const Letters = styled.div`
     font-family: ${fonts.letter1} ;
     font-size: 55px;
     line-height: 2em;
-    
-    /* display: block;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 57ch;
-    animation: typing 2s steps(57),
-    blink .5s infinite step-end alternate ;
-    overflow: hidden; */
     span {
       color: ${colors.darkPink};
     }
   }
-  /* @keyframes typing {
-      from { width: 0; }
-    }
-    @keyframes blink {
-      50% { border-color: transparent; }
-    } */
   h4 {
     font-family: ${fonts.letter2};
     margin: 3vh 0;

@@ -77,10 +77,10 @@ export const HeaderStyle = styled.header`
       display: none;
     }
   @media screen and (max-width: 1015px) {
-    padding: 0 10%;
-    nav {
+    /* padding: 0 10%; */
+    /* nav {
       margin-right: 15%;
-    }
+    } */
   }
   // code to header becomes to a resposive navbar.
   @media screen and (max-width: 770px) {

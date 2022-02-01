@@ -33,7 +33,16 @@ export const FooterStyles = styled.div`
     }
   }
   @media screen and (max-width: 770px) {
-    padding-bottom: 22vh;
+    padding-bottom: 18vh;
+  }
+  @media screen and (max-width: 500px) {
+    text-align: center;
+    flex-direction: column-reverse ;
+    justify-content: center;
+    align-items: center;
+    .letter {
+      margin-top: 3vh;
+    }
   }
 ` 
 
@@ -64,5 +73,10 @@ export const Icons = styled.div`
       opacity: 1;
       transform: translateX(0);
     }
+  }
+  // responsive design
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    justify-content: space-around;
   }
 `
