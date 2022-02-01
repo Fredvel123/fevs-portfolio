@@ -15,7 +15,7 @@ body {
 [id] {
   scroll-margin-top: 12vh;
 }
-@media screen and (max-width: 750px){
+@media screen and (max-width: 770px){
   [id] {
     scroll-margin-top: 0vh;
   } 

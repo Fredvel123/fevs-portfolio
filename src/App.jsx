@@ -3,6 +3,7 @@ import React from 'react';
 import Home from './components/home';
 import Work from './components/work';
 import About from './components/about';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Home  />
       <Work  />
       <About />
+      <Contact />
     </div>
   );
 }
