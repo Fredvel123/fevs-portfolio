@@ -31,7 +31,7 @@ function Projects() {
       img_id: 'notesAppExpress',
       title: "Notes App with express",
       img: notesExpress,
-      text: "This app has an LogIn and SignUp section, where you can create you own user, this app also has a backend and database created an ExpressJs/NodeJs and MongoDb. It's kind of fullstack app",
+      text: "This app has a LogIn and SignUp section, where you can create you own user, this app also has a backend and database created in ExpressJs/NodeJs and MongoDb. It's kind of fullstack app",
       github: "https://github.com/Fredvel123/note_app_frontend",
       url: "https://notes-app-fredd.netlify.app/",
       tech: "ExpressJs, NodeJs, React Router, Redux(toolkit), styled components, local storage, hooks, functional components"
