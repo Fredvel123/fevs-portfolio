@@ -8,6 +8,7 @@ import eCommApp from '../../images/eCommerce-app.jpg'
 import photosApp from '../../images/photos-app.jpg'
 import movieApp from '../../images/movie-app.jpg'
 import dogApp from '../../images/dog-app.jpg'
+import notesExpress from '../../images/notes_express.jpg'
 // icons
 import {RightOutlined, ArrowRightOutlined, ArrowLeftOutlined, InstagramFilled} from '@ant-design/icons';
 
@@ -26,6 +27,17 @@ function Projects() {
     },
     {
       id: '2',
+      info: 'FullStack App Web',
+      img_id: 'notesAppExpress',
+      title: "Notes App with express",
+      img: notesExpress,
+      text: "This app has an LogIn and SignUp section, where you can create you own user, this app also has a backend and database created an ExpressJs/NodeJs and MongoDb. It's kind of fullstack app",
+      github: "https://github.com/Fredvel123/note_app_frontend",
+      url: "https://notes-app-fredd.netlify.app/",
+      tech: "ExpressJs, NodeJs, React Router, Redux(toolkit), styled components, local storage, hooks, functional components"
+    },
+    {
+      id: '3',
       img_id: "gamesApp",
       info: "web Site",
       title: "Games App ",
@@ -36,7 +48,7 @@ function Projects() {
       tech: "UseContext, styled components, hooks, functional components, api Call"
     },
     {
-      id: '3',
+      id: '4',
       img_id: "eCommerceApp",
       info: "App Web",
       title: "e Commerce App",
@@ -48,7 +60,7 @@ function Projects() {
   
     },
     {
-      id: '4',
+      id: '5',
       img_id: "App Web",
       info: "unsplush",
       title: "Unsplusssh ",
@@ -59,7 +71,7 @@ function Projects() {
       tech: "UseContext, styled components, hooks, functional components, api Call"
     },
     {
-      id: '5',
+      id: '6',
       img_id: "movieApp",
       info: "Web Site",
       title: "Movie App",
@@ -70,7 +82,7 @@ function Projects() {
       tech: "React Router, useContext, styled components, hooks, functional components"
     },
     {
-      id: '6',
+      id: '7',
       img_id: "dogApp",
       info: "Web Site",
       title: "Search Dog App",
